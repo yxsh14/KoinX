@@ -72,27 +72,25 @@ const TeamCard: React.FC<TeamCardProps> = ({
 	img,
 }) => {
 	return (
-		<div className='flex-shrink-0 w-full p-4 md:p-6 rounded-lg bg-[#E8F4FD] flex items-center gap-6'>
-			{/* logo */}
-			<div className='flex-shrink-0 flex flex-col gap-3'>
-				<Image
-					src={img}
-					alt='event 1'
-					width={110}
-					height={150}
-					className='rounded-lg'
-				/>
-
-				<div className='text-[#0F1629]'>
-					<h6 className='text-center text-[15px] font-semibold'> {name} </h6>
-					<p className='text-[#788F9B] text-xs text-center'> {designation} </p>
-				</div>
-			</div>
-
-			{/* content */}
-			<div className=''>
-				<p className='text-[10px] md:text-sm text-[#0F1629]'>{description}</p>
-			</div>
+		<div className="flex-shrink-0 w-full p-4 md:p-6 rounded-lg bg-[#E8F4FD] flex flex-col md:flex-row items-center md:items-start gap-6">
+		  <div className="flex-shrink-0 flex flex-col items-center md:items-start gap-3">
+		    <Image
+		      src={img}
+		      alt="Event 1"
+		      width={110}
+		      height={150}
+		      className="rounded-lg"
+		    />
+		
+		    <div className="text-[#0F1629]">
+		      <h6 className="text-center md:text-left text-[15px] font-semibold">{name}</h6>
+		      <p className="text-[#788F9B] text-xs text-center md:text-left">{designation}</p>
+		    </div>
+		  </div>
+		  <div className="text-center md:text-left">
+		    <p className="text-[10px] md:text-sm text-[#0F1629]">{description}</p>
+		  </div>
 		</div>
+
 	)
 }
